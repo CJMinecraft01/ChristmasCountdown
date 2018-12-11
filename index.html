@@ -5,7 +5,8 @@
 	<title>Christmas Countdown</title>
 	<link rel="shortcut icon" href="http://d1ujqdpfgkvqfi.cloudfront.net/favicon-generator/htdocs/favicons/2014-12-31/a0064e3a020389a04c36b729ca9fe744.ico" type="image/x-icon">
 	<link rel="icon" href="http://d1ujqdpfgkvqfi.cloudfront.net/favicon-generator/htdocs/favicons/2014-12-31/a0064e3a020389a04c36b729ca9fe744.ico" type="image/x-icon">
-    <style>
+    <link href='https://fonts.googleapis.com/css?family=Great Vibes' rel='stylesheet'>
+	<style>
       body {
         background-color: black;
         font-family: 'Arial';
@@ -24,8 +25,9 @@
         -ms-transform: translate(-50%, -50%);
       }
 
-      p {
+      #countdown {
 		z-index: 3;
+		margin: 0;
 		position: auto;
 	    text-align: center;
 	    display: inline-block;
@@ -33,6 +35,18 @@
         font-size: 10vw;
 		text-shadow: 0px 0px 20px #ccc, 0px 0px 100px #ccc;
       }
+	  
+	  .title {
+	    z-index: 3;
+		position: auto;
+		font-family: 'Great Vibes';
+	    text-align: center;
+		margin: 0;
+	    display: inline-block;
+        color: white;
+        font-size: 7vw;
+		text-shadow: 0px 0px 20px #ccc, 0px 0px 100px #ccc;
+	  }
     </style>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
@@ -287,6 +301,7 @@
   
   <body>
     <div class='container'>
+	  <p class='title'>Countdown to Christmas</p>
       <p id='countdown'></p>
     </div>
   </body>
