@@ -49,14 +49,19 @@
 	  }
     </style>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
+  </head>
+  
+  <body>
+    <div class='container'>
+	  <p class='title'>Countdown to Christmas</p>
+      <p id='countdown'></p>
+    </div>
+	    <script>
       // Set the date we're counting down to
       var countDownDate = new Date("Dec 25 " + (new Date()).getFullYear()).getTime();
-
-      // Update the count down every 1 second
-      var x = setInterval(function() {
-
-        // Get todays date and time
+	  
+	  function updateTime() {
+		// Get todays date and time
         var now = new Date().getTime();
 
         // Find the distance between now and the count down date
@@ -76,7 +81,11 @@
         if (distance < 0) {
           clearInterval(x);
         }
-      }, 1000);
+	  }
+
+      // Update the count down every 1 second
+	  updateTime();
+      var x = setInterval(updateTime, 1000);
 	  (function($) {
   //
   // Zachary Johnson
@@ -297,12 +306,5 @@
 })(jQuery);
 
     </script>
-  </head>
-  
-  <body>
-    <div class='container'>
-	  <p class='title'>Countdown to Christmas</p>
-      <p id='countdown'></p>
-    </div>
   </body>
 </html>
