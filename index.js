@@ -3,7 +3,7 @@
 var countDownDate = new Date("Dec 25 " + (new Date()).getFullYear()).getTime();
 
 if (new Date().getTime() > countDownDate) {
-	countDownDate = new Date("Dec 25 " + (new Date().getFullYear()) + 1).getTime();
+	countDownDate = new Date("Dec 25 " + (String) (Number(new Date().getFullYear(), 10) + 1)).getTime();
 }
 
 
